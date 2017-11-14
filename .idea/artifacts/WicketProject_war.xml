@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WicketProject:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="WicketProject.war">
+      <element id="artifact" artifact-name="WicketProject:war exploded" />
+    </root>
+  </artifact>
+</component>
