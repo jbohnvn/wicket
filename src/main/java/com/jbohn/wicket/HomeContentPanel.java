@@ -12,21 +12,22 @@ import com.jbohn.model.Country;
 import com.jbohn.model.CountryLookupModel;
 import com.jbohn.wicket.lookup.SimpleLookupDialog;
 
-public class ContentPanel extends Panel {
+public class HomeContentPanel extends Panel {
 
 	private SimpleLookupDialog lookupModal;
 
-	ContentPanel(String id) {
+	HomeContentPanel(String id) {
 		super(id);
 	}
 
 	@Override
 	protected void onInitialize() {
 		super.onInitialize();
-		addLookupDialog();
-		add(createOpenLookupButton("openLookup"));
-		add(createCreateLeadBtn("openCreateLeadBtn"));
-		add(createOpenLeadDetailBtn("openLeadDetail"));
+		setOutputMarkupId(true);
+//		addLookupDialog();
+//		add(createOpenLookupButton("openLookup"));
+//		add(createCreateLeadBtn("openCreateLeadBtn"));
+//		add(createOpenLeadDetailBtn("openLeadDetail"));
 	}
 
 	private void addLookupDialog() {
@@ -63,12 +64,6 @@ public class ContentPanel extends Panel {
 
 			}
 		};
-	}
-
-	@Override
-	protected void onConfigure() {
-		super.onConfigure();
-		lookupModal.show(false);
 	}
 
 	private CountryLookupModel dummyLookupModel() {

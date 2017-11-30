@@ -7,10 +7,36 @@
     <wicket:extend>
         <div class="container-fluid text-center">
             <div class="row content">
-                <div class="col-sm-8 text-left">
+                <div class="col-sm-2 sidenav">
                     <p>
-                        <span wicket:id="contentComponent" id="contentComponent">Message goes here</span>
+                        <a wicket:id="homePage" href="#">Home</a>
                     </p>
+                    <p>
+                        <a wicket:id="openChartDashboardPanel" href="#">Open dashboard</a>
+                    </p>
+                    <p>
+                        <a wicket:id="link2" href="#">Link 2 here</a>
+                    </p>
+                    <p>
+                        <a wicket:id="link3" href="#">Link 3 here</a>
+                    </p>
+                </div>
+                <div class="col-sm-8 text-left">
+                    <span wicket:id="contentComponentContainer" id="contentComponentContainer">
+                            <span wicket:id="contentComponent" id="contentComponent">Messagegoes here</span>
+                     </span>
+                </div>
+                <div class="col-sm-2 sidenav">
+                    <div class="well">
+                        <p>ADS</p>
+                    </div>
+                    <div>
+                        <button wicket:id="openReportDialogButton" class="btn" type="button">Report</button>
+                    </div>
+                    <div>
+                        <button wicket:id="openProcessDialogButton" class="btn" type="button">Process</button>
+                    </div>
+                    <div wicket:id="reportDialog"></div>
                 </div>
             </div>
         </div>
